@@ -1,0 +1,221 @@
+* {
+    font-family: "Ubuntu Nerd Font";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#waybar {
+    background-color: transparent;
+}
+
+#custom-clock,
+#custom-cpu,
+#custom-memory,
+#custom-swap,
+#custom-gpu,
+#custom-network {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    border: 2px solid #4f4f4f;
+    border-radius: 24px;
+    padding: 0px 16px;
+    margin: 8px 4px 4px 4px;
+    transition: all 0.25s ease;
+}
+
+#custom-clock {
+    margin-left: 8px;
+}
+
+#custom-server,
+#custom-tailscale,
+#pulseaudio,
+#tray,
+#custom-power {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    border: 2px solid #4f4f4f;
+    border-radius: 24px;
+    padding: 0px 16px;
+    margin: 8px 4px 4px 4px;
+    transition: all 0.25s ease;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #171717;
+}
+
+#tray menu {
+    background: #0b0b0b;
+    color: #ffffff;
+    border: 2px solid #4f4f4f;
+    border-radius: 24px;
+    padding: 8px 8px;
+    margin: 8px 4px 4px 4px;
+}
+
+#tray menuitem {
+    border-radius: 24px;
+    padding: 4px 4px;
+}
+
+#custom-tailscale.connected,
+#custom-tailscale.disconnected,
+#custom-tailscale.needslogin,
+#custom-tailscale.unknown {
+    background-image: url("/home/endchill/.config/waybar/icons/tailscale/off.svg");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 28px 28px;
+    padding-left: 40px;
+}
+
+#custom-tailscale.connected {
+    background-image: url("/home/endchill/.config/waybar/icons/tailscale/on.svg");
+
+}
+
+#pulseaudio {
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 28px 28px;
+    padding-left: 38px;
+}
+
+#pulseaudio {
+    background-image: url("/home/endchill/.config/waybar/icons/audio/normal.svg");
+}
+
+#pulseaudio.muted {
+    background-image: url("/home/endchill/.config/waybar/icons/audio/muted.svg");
+    color: #ef2f2f;
+}
+
+#custom-wifi {
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: center;
+    background-color: #0b0b0b;
+    color: #ffffff;
+    border: 2px solid #4f4f4f;
+    border-radius: 24px;
+    padding: 0px 16px;
+    margin: 8px 4px 4px 4px;
+    transition: all 0.25s ease;
+}
+
+#custom-wifi.connected-strong {
+    background-image: url("/home/endchill/.config/waybar/icons/wifi/strong.svg");
+}
+#custom-wifi.connected-good {
+    background-image: url("/home/endchill/.config/waybar/icons/wifi/good.svg");
+}
+#custom-wifi.connected-fair {
+    background-image: url("/home/endchill/.config/waybar/icons/wifi/fair.svg");
+}
+#custom-wifi.connected-weak {
+    background-image: url("/home/endchill/.config/waybar/icons/wifi/weak.svg");
+}
+#custom-wifi.connected-no_signal {
+    background-image: url("/home/endchill/.config/waybar/icons/wifi/no_signal.svg");
+}
+#custom-wifi.disconnected {
+    background-image: url("/home/endchill/.config/waybar/icons/wifi/no_signal.svg");
+}
+
+#custom-battery {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    border: 2px solid #4f4f4f;
+    border-radius: 24px;
+    padding: 0px 16px;
+    margin: 8px 4px 4px 4px;
+}
+
+#custom-battery.charging,
+#custom-battery.plugged,
+#custom-battery.shield,
+#custom-battery.full,
+#custom-battery.good,
+#custom-battery.normal,
+#custom-battery.low,
+#custom-battery.critical,
+#custom-battery.empty {
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 28px 28px;
+    padding-left: 36px;
+    transition: all 0.25s ease;
+}
+
+#custom-battery.charging {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/charging.svg");
+}
+
+#custom-battery.plugged {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/plugged.svg");
+}
+
+#custom-battery.shield {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/shield.svg");
+}
+
+#custom-battery.full {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/full.svg");
+}
+
+#custom-battery.good {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/good.svg");
+}
+
+#custom-battery.normal {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/normal.svg");
+}
+
+#custom-battery.low {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/low.svg");
+}
+
+#custom-battery.critical {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/critical.svg");
+}
+
+#custom-battery.empty {
+    background-image: url("/home/endchill/.config/waybar/icons/battery/empty.svg");
+}
+
+#custom-power {
+    font-size: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 8px;
+}
+
+tooltip {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    border: 2px solid #4f4f4f;
+    border-radius: 16px;
+}
+
+tooltip:hover,
+tooltip.visible {
+    opacity: 1;
+}
+
+#custom-clock:hover,
+#custom-swap:hover,
+#custom-server:hover,
+#custom-tailscale:hover,
+#pulseaudio:hover,
+#custom-wifi:hover,
+#custom-battery:hover,
+#custom-power:hover {
+    background-color: #171717;
+    border-color: #ffbf00;
+}
