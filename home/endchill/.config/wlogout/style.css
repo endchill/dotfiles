@@ -1,0 +1,39 @@
+* {
+	font-family: "Ubuntu Nerd Font";
+    font-weight: bold;
+    font-size: 32px;
+	transition: all 0.25s ease;
+}
+
+window {
+	background-color: rgba(0, 0, 0, 0.75);
+}
+
+button {
+    color: #ffbf00;
+	background-color: #000000;
+	border: 2px solid #4f4f4f;
+	border-radius: 24px;
+	margin: 16px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 192px;
+	background-image: none;
+}
+
+button:active,
+button:hover {
+	border: 2px solid #ffbf00;
+}
+
+#logout {
+	background-image: image(url("/home/endchill/.config/wlogout/icons/logout.svg"));
+}
+
+#shutdown {
+	background-image: image(url("/home/endchill/.config/wlogout/icons/shutdown.svg"));
+}
+
+#reboot {
+	background-image: image(url("/home/endchill/.config/wlogout/icons/reboot.svg"));
+}

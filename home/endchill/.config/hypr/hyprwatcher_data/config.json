@@ -1,0 +1,32 @@
+[
+    {
+        "storingDir": "/home/endchill/.config/hypr/hyprwatcher_data",
+        "profile": "docked",
+        "monitors": ["eDP-1", "HDMI-A-1"],
+        "replace": [
+            "/home/endchill/.config/hypr/hyprland.d/monitors.conf",
+            "/home/endchill/.config/hypr/hyprlock.conf",
+            "/home/endchill/.config/waybar/config.jsonc"
+        ],
+        "run": [
+            "hyprctl reload",
+            "",
+            "pkill -f waybar && waybar"
+        ]
+    },
+    {
+        "storingDir": "/home/endchill/.config/hypr/hyprwatcher_data",
+        "profile": "undocked",
+        "monitors": ["eDP-1"],
+        "replace": [
+            "/home/endchill/.config/hypr/hyprland.d/monitors.conf",
+            "/home/endchill/.config/hypr/hyprlock.conf",
+            "/home/endchill/.config/waybar/config.jsonc"
+        ],
+        "run": [
+            "hyprctl reload",
+            "",
+            "pkill -f waybar && waybar"
+        ]
+    }
+]

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1024"
+   height="1024"
+   viewBox="0 0 1024 1024"
+   version="1.1"
+   id="svg1"
+   xml:space="preserve"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><g
+     id="layer1"><path
+       id="rect2"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-miterlimit:30;paint-order:stroke fill markers"
+       d="M 752,756.4082 434.30859,888 H 688 a 64,64 0 0 0 64,-64 z" /><path
+       id="path18"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-miterlimit:30;paint-order:stroke fill markers"
+       d="M 752,557.86133 272,756.68359 V 824 a 64,64 0 0 0 34.65625,56.875 L 752,696.4082 Z" /><path
+       id="path20"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-miterlimit:30;paint-order:stroke fill markers"
+       d="M 752,359.31641 272,558.13867 V 696.68359 L 752,497.86133 Z" /><path
+       id="path23"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-miterlimit:30;paint-order:stroke fill markers"
+       d="M 272,299.5918 589.69141,168 H 336 a 64,64 0 0 0 -64,64 z" /><path
+       id="path21"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke-miterlimit:30;paint-order:stroke fill markers"
+       d="m 717.3457,175.125 a 64,64 0 0 0 -0.002,0 L 272,359.5918 V 498.13867 L 752,299.31445 V 232 a 64,64 0 0 0 -34.6543,-56.875 z" /><path
+       id="path25"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:8;stroke-miterlimit:30;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 448,104 a 32,32 0 0 0 -32,32 v 32 h 32 128 32 v -32 a 32,32 0 0 0 -32,-32 z" /><path
+       id="path6"
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:24;stroke-miterlimit:30;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 336,168 a 64,64 0 0 0 -64,64 v 592 a 64,64 0 0 0 64,64 h 352 a 64,64 0 0 0 64,-64 V 232 a 64,64 0 0 0 -64,-64 z" /></g></svg>

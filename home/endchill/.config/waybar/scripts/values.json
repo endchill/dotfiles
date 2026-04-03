@@ -1,0 +1,48 @@
+{
+  "view_mode": {
+    "date": false,
+    "show_hijri": false,
+    "server_waybar": false
+  },
+  "date": {
+    "greg": "2026.04.04",
+    "hijri": "1447.10.16"
+  },
+  "color": {
+    "clock": {
+      "am": "#f2f200",
+      "pm": "#2692ff"
+    },
+    "season": {
+      "winter": "#7fffff",
+      "spring": "#66ff19",
+      "summer": "#ffe500",
+      "autumn": "#ff7726"
+    },
+    "text": "#ffffff",
+    "accent": "#ffbf00",
+    "positive": "#2fff2f",
+    "negative": "#ef2f2f",
+    "download": "#6afff3",
+    "upload": "#bf71ff"
+  },
+  "threshold": {
+    "usage": {
+      "cpu": "90",
+      "memory": "75",
+      "swap": "50",
+      "gpu": "100"
+    },
+    "temperature": {
+      "cpu": "80",
+      "gpu": "80"
+    }
+  },
+  "misc": {
+    "current_season": "spring"
+  },
+  "network": {
+    "rx1": 32831196669,
+    "tx1": 28579009482
+  }
+}

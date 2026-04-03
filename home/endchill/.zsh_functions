@@ -1,0 +1,8 @@
+# clear-screen-keep-scrollback() {
+#     clear
+#     zle reset-prompt
+# }
+
+dotfiles() {
+    /home/endchill/dotfiles/dotfiles.sh "$@"
+}

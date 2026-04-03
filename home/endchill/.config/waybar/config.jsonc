@@ -1,0 +1,115 @@
+{
+    "layer": "top",
+    "output": "HDMI-A-1",
+    "position": "top",
+    "height": 49,
+    "spacing": 0,
+
+    "modules-left": ["custom/clock", "custom/cpu", "custom/memory", "custom/swap", "custom/gpu", "custom/network"],
+    "modules-right": ["tray", "custom/server", "custom/tailscale", "pulseaudio", "custom/wifi", "custom/battery", "custom/power"],
+
+    "custom/clock": {
+        "exec": "~/.config/waybar/scripts/clock.sh get_info",
+        "return-type": "json",
+        "markup": true,
+        "on-click": "~/.config/waybar/scripts/clock.sh switch_view_mode",
+        "on-click-right": "~/.config/waybar/scripts/clock.sh switch_date_type",
+        "interval": 1
+    },
+
+    "custom/cpu": {
+        "exec": "~/.config/waybar/scripts/cpu.sh",
+        "return-type": "json",
+        "markup": true,
+        "interval": 2
+    },
+
+    "custom/memory": {
+        "exec": "~/.config/waybar/scripts/memory.sh",
+        "return-type": "json",
+        "markup": true,
+        "interval": 2
+    },
+
+    "custom/swap": {
+        "exec": "~/.config/waybar/scripts/swap.sh",
+        "return-type": "json",
+        "tooltip": true,
+        "markup": true,
+        "interval": 2
+    },
+
+    "custom/gpu": {
+        "exec": "~/.config/waybar/scripts/gpu-amd.sh",
+        "return-type": "json",
+        "markup": true,
+        "interval": 2
+    },
+
+    "custom/network": {
+        "exec": "~/.config/waybar/scripts/network.sh",
+        "return-type": "json",
+        "markup": true,
+        "interval": 1
+    },
+
+    "custom/server": {
+        "exec": "~/.config/waybar/scripts/server.sh",
+        "return-type": "json",
+        "markup": true,
+        "tooltip": true,
+        "interval": 1
+    },
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "custom/tailscale": {
+        "exec": "~/.config/waybar/scripts/tailscale.sh get_info",
+        "return-type": "json",
+        "markup": true,
+        "tooltip": true,
+        "on-click": "~/.config/waybar/scripts/tailscale.sh toggle",
+        "on-click-middle": "pkill wofi || ~/.config/waybar/scripts/tailscale.sh copy_menu",
+        "on-double-click-middle": "~/.config/waybar/scripts/tailscale.sh copy_last",
+        "on-click-right": "~/.config/waybar/scripts/tailscale.sh account_menu",
+        "interval": 2
+    },
+
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "{volume}%",
+        "on-click": "pkill pavucontrol-qt || hyprctl dispatch exec \"[float; size 880 640; move 1034 57; workspace current; monitor 1] pavucontrol-qt\""
+    },
+
+    "custom/wifi": {
+        "exec": "~/.config/waybar/scripts/wifi.sh",
+        "return-type": "json",
+        "markup": true,
+        "tooltip": true,
+        "interval": 2,
+        "on-click": "pkill iwgtk || hyprctl dispatch exec \"[float; move 1434 57; workspace current; monitor 1] iwgtk\""
+    },
+
+    "custom/battery": {
+        "exec": "~/.config/waybar/scripts/battery.sh",
+        "return-type": "json",
+        "markup": true,
+        "tooltip": true,
+        "interval": 1
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/scripts/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "hyprshutdown -p 'systemctl poweroff'",
+            "hibernate": "systemctl hibernate",
+            "reboot": "hyprshutdown -p 'systemctl reboot'",
+            "sleep": "systemctl suspend",
+            "logout": "hyprshutdown"
+        },
+    }
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=A script that execute hyprwatcher after graphical session
+After=graphical-session.target
+PartOf=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=%h/.config/hypr/hyprwatcher.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

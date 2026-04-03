@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<keys
+   name="User Shortcuts">
+  <bind
+     gaction="app.path-division"
+     keys="&lt;Shift&gt;n" />
+  <bind
+     gaction="app.path-union"
+     keys="&lt;Shift&gt;m" />
+</keys>
