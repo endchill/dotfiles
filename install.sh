@@ -31,8 +31,6 @@ pacstrap_packages=(
     linux-headers
     linux-lts
     linux-lts-headers
-    linux-rt
-    linux-rt-headers
     linux-zen
     linux-zen-headers
 )
