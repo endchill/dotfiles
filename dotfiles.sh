@@ -7,8 +7,8 @@ if [[ "$1" == "add" ]]; then
 
     for entry in "$@"; do
         if [[ -e $entry ]]; then
-            if [[ "$(dirname $(realpath $entry))" == "$dotfiles_dir" ]]; then
-                git --git-dir=$HOME/dotfiles/.git --work-tree="$dotfiles_dir" add "$dotfiles_dir/$entry"
+            if [[ "$(dirname $(realpath $entry))" == "$dotfiles_dir" || "$(realpath $entry)" == "$dotfiles_dir" ]]; then
+                git --git-dir=$HOME/dotfiles/.git --work-tree="$dotfiles_dir" add "$(realpath $entry)"
             else
                 rsync -rR "$(realpath $entry)" "$dotfiles_dir"
                 git --git-dir=$HOME/dotfiles/.git --work-tree="$dotfiles_dir" add "$dotfiles_dir/$(realpath $entry)"
@@ -18,5 +18,5 @@ if [[ "$1" == "add" ]]; then
         fi
     done
 else
-    git --git-dir=$HOME/dotfiles/.git --work-tree="$dotfiles_dir" $@
+    git --git-dir="$dotfiles_dir/.git" --work-tree="$dotfiles_dir" "$@"
 fi
