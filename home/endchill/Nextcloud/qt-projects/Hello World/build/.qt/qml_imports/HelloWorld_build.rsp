@@ -1,0 +1,14 @@
+-rootPath
+/home/endchill/Nextcloud/qt-projects/Hello World
+-cmake-output
+-output-file
+/home/endchill/Nextcloud/qt-projects/Hello World/build/.qt/qml_imports/HelloWorld_build.cmake
+-importPath
+/home/endchill/Nextcloud/qt-projects/Hello World/build
+-importPath
+/home/endchill/Nextcloud/qt-projects/Hello World/build/HelloWorld
+-importPath
+/usr/lib/qt6/qml
+-qrcFiles
+/home/endchill/Nextcloud/qt-projects/Hello World/build/.qt/rcc/qmake_HelloWorld.qrc
+/home/endchill/Nextcloud/qt-projects/Hello World/build/.qt/rcc/HelloWorld_raw_qml_0.qrc

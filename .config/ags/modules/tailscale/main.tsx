@@ -29,9 +29,9 @@ const stat = createPoll({
 function tailscaleToggle() {
     const tailscaleData = JSON.parse(exec("tailscale status --json"))
     if (tailscaleData.BackendState === "Running") {
-        exec("sudo tailscale down")
+        exec("tailscale down")
     } else {
-        exec("sudo tailscale up")
+        exec("tailscale up")
     }
 }
 

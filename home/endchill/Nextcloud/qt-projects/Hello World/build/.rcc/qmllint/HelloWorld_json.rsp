@@ -1,0 +1,16 @@
+--bare
+-I
+/home/endchill/Nextcloud/qt-projects/Hello World/build
+-I
+/home/endchill/Nextcloud/qt-projects/Hello World/build/HelloWorld
+-I
+/home/endchill/Nextcloud/qt-projects/Hello World/build
+-I
+/usr/lib/qt6/qml
+--resource
+/home/endchill/Nextcloud/qt-projects/Hello World/build/.qt/rcc/qmake_HelloWorld.qrc
+--resource
+/home/endchill/Nextcloud/qt-projects/Hello World/build/.qt/rcc/HelloWorld_raw_qml_0.qrc
+/home/endchill/Nextcloud/qt-projects/Hello World/main.qml
+--json
+/home/endchill/Nextcloud/qt-projects/Hello World/build/HelloWorld_qmllint.json

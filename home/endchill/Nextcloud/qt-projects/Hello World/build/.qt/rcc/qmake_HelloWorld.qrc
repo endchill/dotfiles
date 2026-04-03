@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/HelloWorld">
+    <file alias="qmldir">/home/endchill/Nextcloud/qt-projects/Hello World/build/HelloWorld/qmldir</file>
+  </qresource>
+</RCC>
+

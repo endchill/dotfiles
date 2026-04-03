@@ -58,7 +58,7 @@
         "return-type": "json",
         "markup": true,
         "tooltip": true,
-        "interval": 2
+        "interval": 1
     },
 
     "tray": {

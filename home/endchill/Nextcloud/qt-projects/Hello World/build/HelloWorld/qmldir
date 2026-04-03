@@ -1,0 +1,5 @@
+module HelloWorld
+typeinfo HelloWorld.qmltypes
+prefer :/HelloWorld/
+depends QtQuick
+

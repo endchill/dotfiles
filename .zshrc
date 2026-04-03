@@ -22,6 +22,6 @@ alias pacman="pacman --color always"
 alias pactree="pactree --color"
 alias watch="watch --color"
 alias yay="yay --color always"
-alias dots='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
+alias dotfiles='git --git-dir=$HOME/dotfiles/.git --work-tree=$HOME'
 
 ssh-agent -s 1>/dev/null

@@ -5,8 +5,8 @@
     "server_waybar": false
   },
   "date": {
-    "greg": "2026.03.15",
-    "hijri": "1447.9.26"
+    "greg": "2026.03.20",
+    "hijri": "1447.10.1"
   },
   "color": {
     "clock": {
@@ -39,10 +39,10 @@
     }
   },
   "misc": {
-    "current_season": "winter"
+    "current_season": "spring"
   },
   "network": {
-    "rx1": 3395371160,
-    "tx1": 1253690800
+    "rx1": 931302202,
+    "tx1": 548154704
   }
 }

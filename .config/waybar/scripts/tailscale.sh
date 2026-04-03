@@ -40,19 +40,19 @@ get_info() {
 
 tailscale_toggle() {
     if [ "$tailscale_status" = "Running" ]; then
-        sudo tailscale down
+        tailscale down
     elif [ "$tailscale_status" = "Stopped" ]; then
-        sudo tailscale up
+        tailscale up
     fi
 }
 
 account_menu() {
-    accounts=$(sudo tailscale switch --list | awk '{print $2}' | sed "1d")
+    accounts=$(tailscale switch --list | awk '{print $2}' | sed "1d")
     local menu=$(echo -e "$accounts\nAdd New Account\n<span color='$color_negative'>Logout</span>" | wofi --width 240 --height 240 --xoffset 1594 --yoffset 0 -djm --sort-order=default)
 
     case "$menu" in
         "Add New Account")
-            script -q -c "sudo tailscale login" /dev/null | while read -r url; do
+            script -q -c "tailscale login" /dev/null | while read -r url; do
                 if [[ "$url" =~ https://login\.tailscale\.com ]]; then
                    xdg-open "$url"
                 fi
@@ -60,11 +60,11 @@ account_menu() {
             exit 0
         ;;
         "Logout Current")
-            sudo tailscale logout
+            tailscale logout
             exit 0
         ;;
         *)
-            sudo tailscale switch $menu
+            tailscale switch $menu
             exit 0
         ;;
     esac
