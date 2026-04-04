@@ -1,0 +1,23 @@
+# FINISHED AT: 2026-04-04 14:06:45.303350001 +03:00
+Server = https://us.cachyos.org/repo/$arch/$repo
+Server = https://cdn77.cachyos.org/repo/$arch/$repo
+Server = https://at.cachyos.org/repo/$arch/$repo
+Server = https://us-mnz.soulharsh007.dev/cachyos/repo/$arch/$repo
+Server = https://nl.mirror.cx/cachyos/repo/$arch/$repo
+Server = https://cachyos-mirror.m1k.cloud/repo/$arch/$repo
+Server = https://mirror.lesviallon.fr/cachy/repo/$arch/$repo
+Server = https://wan.metrosg.ru/cachyos/repo/$arch/$repo
+Server = https://no.mirror.cx/cachyos/repo/$arch/$repo
+Server = https://mirror.jura12.ru/repo/$arch/$repo
+Server = https://mirror.zyner.org/mirror/cachyos/repo/$arch/$repo
+Server = https://mirror.hb9hil.org/cachyos/repo/$arch/$repo
+Server = https://cachyos.next-works.it/repo/$arch/$repo
+Server = https://mirror.mergedcloud.de/cachyos/repo/$arch/$repo
+Server = https://cdn.lansing2600.org/cachyos/repo/$arch/$repo
+Server = https://mirror.cachy-arch.ru/cachyos/repo/$arch/$repo
+Server = https://archlinux.gay/cachy/repo/$arch/$repo
+Server = https://cachyos.doridian.net/repo/$arch/$repo
+Server = https://mirror.limda.net/cachy/repo/$arch/$repo
+Server = https://ca.mirror.cx/cachyos/repo/$arch/$repo
+Server = https://mirror.allthingslinux.org/cachyos/repo/$arch/$repo
+Server = https://mirrors.lansing2600.org/cachyos/repo/$arch/$repo

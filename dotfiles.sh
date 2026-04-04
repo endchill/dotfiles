@@ -10,7 +10,7 @@ if [[ "$1" == "add" ]]; then
             if [[ "$(dirname $(realpath $entry))" == "$dotfiles_dir" || "$(realpath $entry)" == "$dotfiles_dir" ]]; then
                 git --git-dir=$HOME/dotfiles/.git --work-tree="$dotfiles_dir" add "$(realpath $entry)"
             else
-                rsync -rR "$(realpath $entry)" "$dotfiles_dir"
+                rsync -arR --partial "$(realpath $entry)" "$dotfiles_dir"
                 git --git-dir=$HOME/dotfiles/.git --work-tree="$dotfiles_dir" add "$dotfiles_dir/$(realpath $entry)"
             fi
         else

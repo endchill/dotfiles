@@ -27,6 +27,8 @@ pacstrap_packages=(
     base
     base-devel
     linux
+    linux-cachyos-rt-bore
+    linux-cachyos-rt-bore-headers
     linux-firmware
     linux-headers
     linux-lts
@@ -106,9 +108,8 @@ pacman_packages=(
     zip
     zsh
 )
-aur_packages=(
-#     kvantum-qt6-git
-)
+pacman_packages+=("$aur_helper")
+# aur_packages=()
 flatpak_package=(
     com.dec05eba.gpu_screen_recorder
     com.github.tchx84.Flatseal
@@ -179,65 +180,21 @@ disk_configuration() {
 }
 
 configuring_base() {
+    pacman -S --noconfirm git
+    git clone https://github.com/endchill/dotfiles.git "/tmp/dotfiles"
+    rm /etc/pacman.d/mirrorlist
+    rsync -r /tmp/dotfiles/etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist
+    pacman -Sy
     pacstrap -K /mnt "$pacstrap_packages"
     genfstab -U /mnt >> /mnt/etc/fstab
 }
 
 configuring_bootloader() {
-    local root_partition=$1
-
     bootctl install
-
-    cat << EOF > loader.conf
-default arch-zen.conf
-timeout 0
-auto-entries 0
-editor yes
-EOF
-
-    cat << EOF > /boot/loader/entries/arch.conf
-title   Arch Linux Stable Kernel
-linux   /vmlinuz-linux
-initrd  /initramfs-linux.img
-initrd  /$ucode.img
-options root=UUID=$root_partition rw zswap.enabled=0
-EOF
-
-    cat << EOF > /boot/loader/entries/arch-lts.conf
-# title   Arch Linux LTS Kernel
-linux   /vmlinuz-linux-lts
-initrd  /initramfs-linux-lts.img
-initrd  /$ucode.img
-options root=UUID=$root_partition rw zswap.enabled=0
-EOF
-
-    cat << EOF > /boot/loader/entries/arch-zen.conf
-title   Arch Linux Zen Kernel
-linux   /vmlinuz-linux-zen
-initrd  /initramfs-linux-zen.img
-initrd  /$ucode.img
-options root=UUID=$root_partition rw zswap.enabled=0
-EOF
-
-    cat << EOF > /boot/loader/entries/arch-rt.conf
-title   Arch Linux Real-Time Kernel
-linux   /vmlinuz-linux-rt
-initrd  /initramfs-linux-rt.img
-initrd  /$ucode.img
-options root=UUID=$root_partition rw zswap.enabled=0
-EOF
-
-    bootctl update
 }
 
 printf '%s ALL=(ALL) NOPASSWD: /usr/bin/pacman\n' "$username" > /etc/sudoers.d/tmp
 chmod 440 "/etc/sudoers.d/tmp"
-
-if [[ "$use_paru" == true ]]; then
-    sudo -u $username bash -c "git clone https://aur.archlinux.org/paru.git "/tmp/$random" && (cd "/tmp/$random" && makepkg -si --noconfirm)"
-else
-    sudo -u $username bash -c "git clone https://aur.archlinux.org/yay.git "/tmp/$random" && (cd "/tmp/$random" && makepkg -si --noconfirm)"
-fi
 
 pacman -S --noconfirm "$pacman_packages"
 flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
